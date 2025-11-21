@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "neha",
+      "password": "1234"
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Bali, Indonesia",
+      "lat": -8.3405,
+      "lon": 115.092,
+      "short": "Beaches & temples",
+      "description": "Tropical island, rice terraces, surf spots."
+    },
+    {
+      "id": 2,
+      "name": "Paris, France",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "short": "City of lights",
+      "description": "Eiffel Tower, museums, cafes."
+    },
+    {
+      "id": 3,
+      "name": "Maldives",
+      "lat": 3.2028,
+      "lon": 73.2207,
+      "short": "Island paradise",
+      "description": "Coral reefs, luxury resorts."
+    }
+  ],
+  "bookings": [
+    {
+      "id": "9bdd",
+      "destination": "🇮🇩 Bali, Indonesia",
+      "type": "Book Hotel",
+      "name": "",
+      "email": "",
+      "date": "",
+      "guests": "",
+      "days": 0,
+      "createdAt": "2025-10-28T09:02:47.116Z"
+    },
+    {
+      "id": "7fd2",
+      "type": "hotel",
+      "city": "Bali",
+      "name": "Ayana Resort",
+      "date": "2025-10-28T09:17:42.537Z"
+    },
+    {
+      "id": "48ad",
+      "type": "table",
+      "city": "Bali",
+      "name": "La Lucciola",
+      "date": "2025-10-28T09:17:49.142Z"
+    },
+    {
+      "id": "3de8",
+      "type": "flight",
+      "city": "Bali",
+      "name": "Garuda Indonesia",
+      "date": "2025-10-28T09:17:51.900Z"
+    }
+  ],
+  "feedbacks": []
+}
