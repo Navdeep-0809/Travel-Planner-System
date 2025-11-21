@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Packing | Travel Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: "Poppins", sans-serif; background: #f5f7fa; color: #333;}
+
+    header {
+      background: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      color: white; text-align: center; padding: 90px 20px;
+    }
+    header h1 {font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.6);}
+    header p {font-size: 1.2rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);}
+
+    nav {
+      display: flex; justify-content: center; background: #009688; padding: 15px;
+    }
+    nav a {
+      color: white; margin: 0 15px; text-decoration: none; font-weight: 600;
+    }
+    nav a:hover {text-decoration: underline;}
+
+    section {padding: 60px 20px; max-width: 1100px; margin: auto;}
+    section h2 {font-size: 2.2rem; margin-bottom: 30px; color: #009688; text-align: center;}
+
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .packing-card {
+      background: white; padding: 25px; border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .packing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    }
+
+    .packing-card h3 {
+      font-size: 1.4rem; margin-bottom: 12px; color: #009688;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .packing-card ul {list-style: none; padding: 0;}
+    .packing-card ul li {
+      padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.95rem;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .packing-card ul li:last-child {border-bottom: none;}
+    .packing-card ul li::before {
+      content: "✔️"; color: #009688; font-size: 1rem;
+    }
+
+    footer {
+      background: #009688; color: white; text-align: center; padding: 18px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🧳 Smart Packing Guide</h1>
+    <p>Pack smartly for your dream destination</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="seasonal.html">Seasonal Destinations</a>
+    <a href="packing.html">Smart Packing</a>
+  </nav>
+
+  <!-- Packing Lists -->
+  <section>
+    <h2>Recommended Packing Lists</h2>
+
+    <div class="grid">
+      <div class="packing-card">
+        <h3>🇫🇷 Paris, France</h3>
+        <ul>
+          <li>Comfortable walking shoes</li>
+          <li>Stylish outfits for evenings</li>
+          <li>Light jacket or coat</li>
+          <li>Umbrella & travel guidebook</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇯🇵 Tokyo, Japan</h3>
+        <ul>
+          <li>Power adapter (Type A/B)</li>
+          <li>Comfortable sneakers</li>
+          <li>Seasonal clothes (jacket in spring/autumn)</li>
+          <li>Cash for local shops</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇮🇩 Bali, Indonesia</h3>
+        <ul>
+          <li>Swimwear & flip-flops</li>
+          <li>Insect repellent</li>
+          <li>Light tropical clothes</li>
+          <li>Reusable water bottle</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇦🇪 Dubai, UAE</h3>
+        <ul>
+          <li>Light cotton clothes</li>
+          <li>Respectful outfits for mosques</li>
+          <li>Sunscreen & sunglasses</li>
+          <li>Comfortable walking shoes</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇮🇹 Rome, Italy</h3>
+        <ul>
+          <li>Comfortable shoes for cobblestones</li>
+          <li>Modest clothing for churches</li>
+          <li>Light jacket for evenings</li>
+          <li>Reusable water bottle</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇿🇦 Cape Town, South Africa</h3>
+        <ul>
+          <li>Hiking shoes for mountains</li>
+          <li>Light clothes for beaches</li>
+          <li>Sunscreen & hat</li>
+          <li>Warm jacket for evenings</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇬🇧 London, UK</h3>
+        <ul>
+          <li>Umbrella (rainy weather!)</li>
+          <li>Warm coat for cold days</li>
+          <li>Comfortable shoes</li>
+          <li>Travel adapter (Type G)</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🇵🇪 Machu Picchu, Peru</h3>
+        <ul>
+          <li>Hiking boots & backpack</li>
+          <li>Raincoat or poncho</li>
+          <li>Sunscreen & hat</li>
+          <li>Altitude sickness medication</li>
+        </ul>
+      </div>
+
+      <div class="packing-card">
+        <h3>🏝 Maldives</h3>
+        <ul>
+          <li>Light beachwear</li>
+          <li>Snorkeling gear</li>
+          <li>Sunscreen & sunglasses</li>
+          <li>Flip-flops & hat</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Travel Explorer | Smart Packing Guide</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="api.js"></script>
+</body>
+</html>

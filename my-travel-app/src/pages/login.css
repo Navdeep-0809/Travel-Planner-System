@@ -1,0 +1,93 @@
+.login-container {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to right, #0b7f79, #0fa8a1);
+font-family: "Poppins", sans-serif;
+}
+
+
+/* Centered card */
+.login-card {
+width: 380px;
+background: #fff;
+padding: 40px 35px;
+border-radius: 15px;
+box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+text-align: center;
+}
+
+
+.login-card h2 {
+font-size: 28px;
+margin-bottom: 5px;
+color: #0b7f79;
+}
+
+
+.subtitle {
+font-size: 14px;
+color: #555;
+margin-bottom: 25px;
+}
+
+
+/* input fields */
+.login-card input {
+width: 100%;
+padding: 14px;
+margin-bottom: 18px;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 15px;
+outline: none;
+transition: 0.2s ease-in-out;
+}
+
+
+.login-card input:focus {
+border-color: #0b7f79;
+box-shadow: 0 0 5px rgba(11,127,121,0.3);
+}
+
+
+/* login button */
+.login-btn {
+width: 100%;
+padding: 14px;
+background: #0b7f79;
+border: none;
+border-radius: 8px;
+font-size: 17px;
+color: #fff;
+font-weight: 600;
+cursor: pointer;
+margin-top: 10px;
+transition: 0.25s ease;
+}
+
+
+.login-btn:hover {
+background: #08655f;
+}
+
+
+/* bottom text */
+.bottom-text {
+margin-top: 20px;
+display: flex;
+justify-content: space-between;
+}
+
+
+.bottom-text a {
+color: #0b7f79;
+font-size: 14px;
+text-decoration: none;
+}
+
+
+.bottom-text a:hover {
+text-decoration: underline;
+}
