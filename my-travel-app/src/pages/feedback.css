@@ -1,0 +1,95 @@
+.feedback-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #0b7f79, #13a89f);
+  font-family: "Poppins", sans-serif;
+}
+
+.feedback-card {
+  width: 450px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+}
+
+.feedback-card h2 {
+  text-align: center;
+  color: #0b7f79;
+  font-size: 26px;
+}
+
+.sub {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.feedback-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 18px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+  border-color: #0b7f79;
+  box-shadow: 0 0 5px rgba(11,127,121,0.3);
+}
+
+.feedback-card textarea {
+  height: 120px;
+  resize: none;
+}
+
+.feedback-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0b7f79;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.feedback-btn:hover {
+  background: #095f59;
+}
+
+/* Success Box */
+.success-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-box h3 {
+  color: #0b7f79;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  color: #555;
+  font-size: 16px;
+}
+

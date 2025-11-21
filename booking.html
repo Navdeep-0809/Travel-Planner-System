@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookings | Travel Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      color: white; text-align: center; padding: 90px 20px;
+    }
+    header h1 {font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.6);}
+    header p {font-size: 1.2rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);}
+
+    nav {
+      display: flex; justify-content: center; background: #009688; padding: 15px;
+    }
+    nav a {
+      color: white; margin: 0 15px; text-decoration: none; font-weight: 600;
+    }
+    nav a:hover {text-decoration: underline;}
+
+    section {padding: 60px 20px; max-width: 1200px; margin: auto;}
+    section h2 {font-size: 2.2rem; margin-bottom: 30px; color: #009688; text-align: center;}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 25px;
+    }
+
+    .booking-card {
+      background: white; padding: 25px; border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .booking-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    }
+
+    .booking-card h3 {
+      font-size: 1.4rem; margin-bottom: 15px; color: #009688;
+    }
+
+    .booking-options {list-style: none; padding: 0;}
+    .booking-options li {
+      padding: 10px; margin-bottom: 8px;
+      border: 1px solid #eee; border-radius: 8px;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.3s;
+    }
+    .booking-options li:hover {background: #f0fdfa;}
+    .booking-options span {font-weight: bold; color: #555;}
+    .book-btn {
+      background: #009688; color: white; padding: 6px 12px;
+      border: none; border-radius: 6px; cursor: pointer;
+      font-size: 0.9rem; transition: background 0.3s;
+    }
+    .book-btn:hover {background: #00796B;}
+    
+    footer {
+      background: #009688; color: white; text-align: center; padding: 18px;
+      margin-top: 60px;
+    }
+
+    /* Popup Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center; align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-align: center;
+      position: relative;
+    }
+    .modal-content h3 {
+      color: #009688; margin-bottom: 15px;
+    }
+
+    /* Form styling - each input on its own line */
+    .modal-content form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .modal-content input,
+    .modal-content select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    .modal-content button {
+      background: #009688; color: white;
+      border: none; padding: 10px 15px;
+      border-radius: 5px; cursor: pointer;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .close-btn {
+      background: red; color: white;
+      border: none; border-radius: 5px;
+      padding: 6px 10px; position: absolute; top: 10px; right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🛎 Book Your Trip</h1>
+    <p>Hotels, Restaurants & Flights – All in one place</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="seasonal.html">Seasonal Destinations</a>
+    <a href="packing.html">Smart Packing</a>
+    <a href="booking.html">Bookings</a>
+  </nav>
+
+  <!-- Booking Section -->
+  <section>
+    <h2>Available Bookings</h2>
+
+    <div class="grid">
+      <!-- Existing destinations -->
+      <div class="booking-card">
+        <h3>🇫🇷 Paris, France</h3>
+        <ul class="booking-options">
+          <li><span>Hotel Le Meurice</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Restaurant Le Jules Verne</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>Air France Flight</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇯🇵 Tokyo, Japan</h3>
+        <ul class="booking-options">
+          <li><span>Hotel Park Hyatt Tokyo</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Sushi Saito</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>ANA Airlines</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇮🇩 Bali, Indonesia</h3>
+        <ul class="booking-options">
+          <li><span>Ayana Resort</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>La Lucciola</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>Garuda Indonesia</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇦🇪 Dubai, UAE</h3>
+        <ul class="booking-options">
+          <li><span>Burj Al Arab</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Ossiano Restaurant</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>Emirates Airlines</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <!-- New destinations -->
+      <div class="booking-card">
+        <h3>🇮🇹 Rome, Italy</h3>
+        <ul class="booking-options">
+          <li><span>Hotel Eden</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Ristorante Aroma</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>ITA Airways</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇿🇦 Cape Town, South Africa</h3>
+        <ul class="booking-options">
+          <li><span>One&Only Cape Town</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Gold Restaurant</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>South African Airways</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇬🇧 London, UK</h3>
+        <ul class="booking-options">
+          <li><span>The Savoy Hotel</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Gordon Ramsay Restaurant</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>British Airways</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇵🇪 Machu Picchu, Peru</h3>
+        <ul class="booking-options">
+          <li><span>Inkaterra Machu Picchu Pueblo Hotel</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Indio Feliz Restaurant</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>LATAM Airlines</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+
+      <div class="booking-card">
+        <h3>🇲🇻 Maldives</h3>
+        <ul class="booking-options">
+          <li><span>Gili Lankanfushi</span> <button class="book-btn">Book Hotel</button></li>
+          <li><span>Ithaa Undersea Restaurant</span> <button class="book-btn">Reserve Table</button></li>
+          <li><span>Maldivian Airlines</span> <button class="book-btn">Book Flight</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">X</button>
+      <h3 id="formTitle">Booking Form</h3>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="date" id="date" required>
+        <select id="guests" required>
+          <option value="">Number of Guests</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4+</option>
+        </select>
+        <div id="extraField"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Travel Explorer | Booking Page</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const modal = document.getElementById('bookingModal');
+    const closeModal = document.getElementById('closeModal');
+    const formTitle = document.getElementById('formTitle');
+    const bookingForm = document.getElementById('bookingForm');
+    const extraField = document.getElementById('extraField');
+
+    document.querySelectorAll('.book-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const bookingType = e.target.textContent.trim();
+        formTitle.textContent = bookingType + " Form";
+        extraField.innerHTML = ''; // clear old field
+
+        if (bookingType === 'Book Hotel') {
+          extraField.innerHTML = `<input type="number" id="days" placeholder="Number of Days" min="1" required>`;
+        } 
+        else if (bookingType === 'Reserve Table') {
+          extraField.innerHTML = `<input type="time" id="time" required>`;
+        }
+
+        modal.style.display = 'flex';
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.style.display = 'none');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert("✅ Registration Done Successfully!");
+      modal.style.display = 'none';
+      bookingForm.reset();
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target == modal) modal.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

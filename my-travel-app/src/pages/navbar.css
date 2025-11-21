@@ -1,0 +1,98 @@
+.navbar {
+  background: #009688;
+  padding: 10px 40px;   /* smaller padding */
+  height: 70px;         /* fixed small height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 1.4rem; /* slightly smaller */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  text-decoration: underline;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+}
+
+.list-icon-wrapper {
+  position: relative;
+}
+
+.list-icon {
+  background: white;
+  color: #009688;
+  font-weight: bold;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: white;
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.list-item button {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+}
+
+.empty {
+  color: #777;
+  text-align: center;
+}
+
